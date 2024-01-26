@@ -1,10 +1,10 @@
 ## chat.guanjihuan.com
 
-这里把 https://chat.guanjihuan.com 的主要实现代码进行开源，主要参考开源大模型的 GitHub 或 HuggingFace 主页、第三方模型的 API 官网，以及 HuggingFace 和 Pytorch 的文档等。
+这里把 https://chat.guanjihuan.com 的主要实现代码进行开源，主要参考各个开源大模型的 GitHub 或 HuggingFace 主页、第三方模型的 API 官网，以及 HuggingFace 和 Pytorch 的文档等。
 
-此外，还有很多开源大模型，这里只测试了几个，感兴趣的可以自行测试，通常 16G 显存的显卡可以完整加载 7B 左右的模型（70亿参数）以及量化地加载 14B 左右的模型（14亿参数），更大参数空间的模型的运行需要更大显存的显卡。
+运行这里的代码需要安装 Python 环境，可以选择安装 Anaconda：https://www.anaconda.com 。如果是本地 GPU 运行模型，还需要 Nvidia 显卡。
 
-运行代码需要安装 Python 环境，可以选择安装 Anaconda：https://www.anaconda.com 。如果是本地 GPU 运行模型，还需要 Nvidia 显卡。特别说明：本篇提供了在本地 CPU 加载 ChatGLM 模型的代码，没有独立显卡的可以考虑这个，只是对话速度会比较慢。
+说明：这里只测试了几个，还有更多开源大模型，感兴趣的可以自行测试。通常，8G 显存的显卡可以量化地加载 7B 左右的模型（70亿参数）；16G 显存的显卡可以完整加载 7B 左右的模型（70亿参数）以及量化地加载 14B 左右的模型（14亿参数）；更大参数空间的模型的运行需要更大显存的显卡。开源大模型的排行榜有：https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard 、https://cevalbenchmark.com/static/leaderboard.html 、https://opencompass.org.cn/leaderboard-llm 。
 
 Web 框架是使用 Streamlit：https://streamlit.io、https://github.com/streamlit/streamlit 。
 
