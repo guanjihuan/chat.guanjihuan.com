@@ -65,7 +65,7 @@ pip install -r requirements.txt
 运行命令：
 
 ```
-python -m streamlit run ./ChatGLM3.py --theme.base dark --server.port 8501
+python -m streamlit run ./ChatGLM.py --theme.base dark --server.port 8501
 ```
 
 如果量化加载时 bitsandbytes 报错，那么安装该软件包：pip install bitsandbytes

@@ -11,7 +11,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model_internlm_7B():
-    # internlm（大概需要 7B 显存）
+    # internlm（需要 7B 显存）
     import torch
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
     nf4_config = BitsAndBytesConfig(
