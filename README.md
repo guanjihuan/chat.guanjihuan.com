@@ -42,7 +42,7 @@ sudo apt-get install ubuntu-drivers-common
 sudo ubuntu-drivers autoinstall
 ```
 
-此外，可以更新一下 Pytorch（https://pytorch.org/get-started/locally/），也可以防止一些报错：
+此外，可以更新一下 Pytorch（ https://pytorch.org/get-started/locally/ ），也可以防止一些报错：
 
 ```
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
