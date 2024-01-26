@@ -4,6 +4,8 @@
 
 运行这里的代码需要安装 Python 环境，可以选择安装 Anaconda：https://www.anaconda.com 。如果是本地 GPU 运行模型，还需要 Nvidia 显卡，至少 6G 显存。说明：这里只测试了几个模型，还有更多开源大模型，感兴趣的可以自行测试。通常，8G 显存的显卡可以量化地加载 7B 左右的模型（70亿参数）；16G 显存的显卡可以完整加载 7B 左右的模型（70亿参数）以及量化地加载 14B 左右的模型（14亿参数）；更大参数空间的模型的运行需要更大显存的显卡。开源大模型的排行榜有：https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard 、https://cevalbenchmark.com/static/leaderboard.html 、https://opencompass.org.cn/leaderboard-llm 。
 
+### 一、基础环境
+
 Web 框架是使用 Streamlit：https://streamlit.io 、https://github.com/streamlit/streamlit 。
 
 Streamlit 的安装：
@@ -46,7 +48,7 @@ sudo ubuntu-drivers autoinstall
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
 
-### 一、本地运行开源模型
+### 二、本地运行开源模型
 
 #### 1. 开源模型 ChatGLM
 
@@ -114,7 +116,7 @@ internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2
 python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 ```
 
-### 二、使用第三方模型 API
+### 三、使用第三方模型 API
 
 #### 1. 智谱 - ChatGLM_Turbo
  
