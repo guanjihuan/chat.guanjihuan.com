@@ -50,7 +50,6 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 
 ### 一、本地运行开源模型
 
-
 #### 1. 开源模型 ChatGLM
 
 ChatGLM3-6B 主页：https://github.com/THUDM/ChatGLM3 。 安装该模型依赖的环境：
