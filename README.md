@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 显存/内存要求：量化加载大概要 6G 显存；默认加载大概需要 13G 显存；CPU加载大概需要 25G 内存。
 
-运行：
+运行命令：
 
 ```
 python -m streamlit run ./ChatGLM3.py --theme.base dark --server.port 8501
@@ -84,7 +84,7 @@ Qwen-14B-Chat-Int4 模型文件下载：https://huggingface.co/Qwen/Qwen-14B-Cha
 
 显存要求：Qwen-7B-Chat-Int4 大概需要 8G 显存；Qwen-14B-Chat-Int4 大概需要 12G 显存。
 
-运行：
+运行命令：
 
 ```
 python -m streamlit run ./Qwen.py --theme.base dark --server.port 8501
@@ -110,7 +110,7 @@ internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2
 
 显存要求：大概需要 7B 的显存。
 
-运行：
+运行命令：
 
 ```
 python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
@@ -122,7 +122,7 @@ python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
  
 智谱 - ChatGLM Turbo 的 API key 获取（收费，可免费试用）：https://maas.aminer.cn
 
-运行：
+运行命令：
 
 ```
 python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
@@ -132,7 +132,7 @@ python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 
 讯飞 - 星火大模型的 API key 获取（收费，可免费试用）：https://xinghuo.xfyun.cn
 
-运行：
+运行命令：
 
 ```
 python -m streamlit run ./星火大模型.py --theme.base dark --server.port 8501
