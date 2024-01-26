@@ -58,7 +58,7 @@ ChatGLM3-6B 主页：https://github.com/THUDM/ChatGLM3 。 安装该模型依赖
 pip install -r requirements.txt
 ```
 
-模型文件下载：https://huggingface.co/THUDM/chatglm3-6b-32k
+模型文件下载：https://huggingface.co/THUDM/chatglm3-6b-32k ，放在目录 THUDM/chatglm3-6b-32k 下。
 
 显存/内存要求：量化加载大概要 6G 显存；默认加载大概需要 13G 显存；CPU加载大概需要 25G 内存。
 
@@ -78,9 +78,9 @@ Qwen 主页：https://github.com/QwenLM/Qwen 。 安装该模型依赖的环境�
 pip install -r requirements.txt
 ```
 
-Qwen-7B-Chat-Int4 模型文件下载：https://huggingface.co/Qwen/Qwen-7B-Chat-Int4
+Qwen-7B-Chat-Int4 模型文件下载：https://huggingface.co/Qwen/Qwen-7B-Chat-Int4 ，放在目录 Qwen/Qwen-7B-Chat-Int4 下。
 
-Qwen-14B-Chat-Int4 模型文件下载：https://huggingface.co/Qwen/Qwen-14B-Chat-Int4
+Qwen-14B-Chat-Int4 模型文件下载：https://huggingface.co/Qwen/Qwen-14B-Chat-Int4 ，放在目录 Qwen/Qwen-14B-Chat-Int4 下。
 
 显存要求：Qwen-7B-Chat-Int4 大概需要 8G 显存；Qwen-14B-Chat-Int4 大概需要 12G 显存。
 
@@ -102,11 +102,9 @@ pip install --upgrade s3fs aiobotocore botocore
 
 InternLM 主页：https://github.com/InternLM/InternLM 。运行代码时，需要调用其中的 tools 文件夹。
 
-internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-chat-7b
+internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-chat-7b ，放在 internlm/internlm-chat-7b 目录下。
 
-internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2-chat-7b
-
-目前提供的代码是加载 internlm-chat-7b 模型，加载 internlm2-chat-7b 模型的未测试。
+说明：提供的代码是加载 internlm-chat-7b 模型， 目前已经有 internlm2-chat-7b 模型，但个人还未测试。internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2-chat-7b
 
 显存要求：大概需要 7B 的显存。
 
