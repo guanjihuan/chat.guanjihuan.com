@@ -48,7 +48,7 @@ sudo ubuntu-drivers autoinstall
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
 
-### 二、本地运行开源模型
+### 二、本地运行开源大语言模型
 
 #### 1. 开源模型 ChatGLM
 
