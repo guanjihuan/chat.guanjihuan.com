@@ -102,11 +102,9 @@ pip install --upgrade s3fs aiobotocore botocore
 
 InternLM 主页：https://github.com/InternLM/InternLM 。运行代码时，需要调用其中的 tools 文件夹。
 
-internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-chat-7b ，放在 internlm/internlm-chat-7b 目录下。
+internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-chat-7b ，放在 internlm/internlm-chat-7b 目录下。说明：提供的代码是加载 internlm-chat-7b 模型， 目前已经有 internlm2-chat-7b 模型，但个人还未测试。internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2-chat-7b
 
-说明：提供的代码是加载 internlm-chat-7b 模型， 目前已经有 internlm2-chat-7b 模型，但个人还未测试。internlm2-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm2-chat-7b
-
-显存要求：大概需要 7B 的显存。
+显存要求：大概需要 7G 的显存。
 
 运行命令：
 
