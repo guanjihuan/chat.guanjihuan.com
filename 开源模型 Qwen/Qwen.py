@@ -9,7 +9,7 @@ st.set_page_config(
     layout='wide'
 )
 
-choose_load_model = 1  # 选择加载的模型（Qwen-7B 或 Qwen-14B）
+choose_load_model = 0  # 选择加载的模型（Qwen-7B 或 Qwen-14B）
 
 if choose_load_model == 0:
     # Qwen-7B（需要8G显存）
