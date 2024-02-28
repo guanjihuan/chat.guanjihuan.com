@@ -38,7 +38,7 @@ elif choose_load_method == 1:
     model_chatglm3, tokenizer_chatglm3 = load_model_chatglm3()
 
 elif choose_load_method == 2:
-    # 在CPU上加载（需要25G内存，对话速度会比较慢）
+    # 在CPU上加载（需要25G内存，对话速度会比较慢，不推荐）
     @st.cache_resource
     def load_model_chatglm3():
         from transformers import AutoModel, AutoTokenizer
