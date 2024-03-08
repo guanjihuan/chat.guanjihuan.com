@@ -117,7 +117,7 @@ python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 ### 三、使用第三方模型 API
 
 #### 1. 智谱 - ChatGLM_Turbo
- 
+
 智谱 - ChatGLM Turbo 的 API key 获取（收费，可免费试用）：https://maas.aminer.cn
 
 运行命令：
@@ -125,6 +125,8 @@ python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 ```
 python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 ```
+
+说明：当前代码只对 pip install zhipuai==1.0.7 有效，对最新版本不兼容。
 
 #### 2. 讯飞 - 星火大模型
 

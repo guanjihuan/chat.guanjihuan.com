@@ -13,8 +13,10 @@ try:
     import zhipuai
 except:
     import os
-    os.system('pip install zhipuai')
+    os.system('pip install zhipuai==1.0.7')
     import zhipuai
+
+# 说明：当前代码只对 pip install zhipuai==1.0.7 有效，对最新版本不兼容。
 
 # 从官网获取 API_KEY
 zhipuai.api_key = " "
