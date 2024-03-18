@@ -32,7 +32,7 @@ with st.sidebar:
         def reset_parameter():
             st.session_state['top_p_session'] = 0.8
             st.session_state['temperature_session'] = 0.8
-        reset_parameter_button = st.button('重置参数', on_click=reset_parameter)
+        reset_parameter_button = st.button('重置', on_click=reset_parameter)
 
 prompt = st.chat_input("在这里输入您的命令")
 
