@@ -128,7 +128,19 @@ python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 
 说明：当前代码只对 pip install zhipuai==1.0.7 有效，对最新版本不兼容。
 
-#### 2. 讯飞 - 星火大模型
+#### 2. 阿里 - Qwen_Turbo
+
+阿里 - Qwen_Turbo 的 API key 获取（收费，可免费试用）：https://help.aliyun.com/zh/dashscope/create-a-chat-foundation-model
+
+运行命令：
+
+```
+python -m streamlit run ./Qwen_Turbo.py --theme.base dark --server.port 8501
+```
+
+需要安装软件包：pip install dashscope
+
+#### 3. 讯飞 - 星火大模型
 
 讯飞 - 星火大模型的 API key 获取（收费，可免费试用）：https://xinghuo.xfyun.cn
 
