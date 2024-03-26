@@ -130,7 +130,7 @@ python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 
 #### 2. 阿里 - Qwen_Turbo
 
-阿里 - Qwen_Turbo 的 API key 获取（收费，可免费试用）：https://help.aliyun.com/zh/dashscope/create-a-chat-foundation-model
+阿里 - Qwen_Turbo 的 API key 获取（收费，可免费试用）：https://dashscope.aliyun.com
 
 运行命令：
 
