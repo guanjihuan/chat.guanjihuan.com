@@ -16,13 +16,15 @@ api_key =" "    # 填写控制台中获取的 APIKey 信息
 
 with st.sidebar:
     with st.expander('模型', expanded=True):
-        API_model = st.radio('选择：', ('讯飞 - 星火大模型 V1.5', '讯飞 - 星火大模型 V2.0', '讯飞 - 星火大模型 V3.0'), key='choose_API_model')
+        API_model = st.radio('选择：', ('讯飞 - 星火大模型 V1.5', '讯飞 - 星火大模型 V2.0', '讯飞 - 星火大模型 V3.0', '讯飞 - 星火大模型 V3.5'), key='choose_API_model')
         if API_model == '讯飞 - 星火大模型 V1.5':
             API_model_0 = '星火大模型 V1.5'
         elif API_model == '讯飞 - 星火大模型 V2.0':
             API_model_0 = '星火大模型 V2.0'
         elif API_model == '讯飞 - 星火大模型 V3.0':
             API_model_0 = '星火大模型 V3.0'
+        elif API_model == '讯飞 - 星火大模型 V3.5':
+            API_model_0 = '星火大模型 V3.5'
         st.write('当前模型：'+API_model_0)
 
     with st.expander('参数', expanded=True):
@@ -37,14 +39,15 @@ with st.sidebar:
 if API_model == '讯飞 - 星火大模型 V1.5':
     domain = "general"   # v1.5版本
     Spark_url = "ws://spark-api.xf-yun.com/v1.1/chat"  # v1.5环境的地址
-
 elif API_model == '讯飞 - 星火大模型 V2.0':
     domain = "generalv2"    # v2.0版本
     Spark_url = "ws://spark-api.xf-yun.com/v2.1/chat"  # v2.0环境的地址
-
 elif API_model == '讯飞 - 星火大模型 V3.0':
     domain = "generalv3"    # v3.0版本
     Spark_url = "ws://spark-api.xf-yun.com/v3.1/chat"  # v3.0环境的地址
+elif API_model == '讯飞 - 星火大模型 V3.5':
+    domain = "generalv3"    # v3.0版本
+    Spark_url = "ws://spark-api.xf-yun.com/v3.5/chat"  # v3.5环境的地址
 
 import _thread as thread
 import base64
@@ -285,3 +288,35 @@ elif  API_model == '讯飞 - 星火大模型 V3.0':
         st.session_state.messages3.append({"role": "robot", "content": answer, "avatar": "assistant"})
         st.rerun()
     button_clear = st.button("清空", on_click=clear_all3, key='clear3')
+
+elif  API_model == '讯飞 - 星火大模型 V3.5':
+    if "text4" not in st.session_state:
+        st.session_state.text4 = []
+    if "messages4" not in st.session_state:
+        st.session_state.messages4 = [] 
+    def clear_all4():
+        st.session_state.messages4 = []
+        st.session_state.text4 = []
+    if st.session_state.messages4 == []:
+        with st.chat_message("user", avatar="user"):
+            input_placeholder = st.empty()
+        with st.chat_message("robot", avatar="assistant"):
+            message_placeholder = st.empty()
+    for message in st.session_state.messages4:
+        with st.chat_message(message["role"], avatar=message.get("avatar")):
+            st.markdown(message["content"])
+    if prompt_text:
+        if st.session_state.messages4 != []:
+            with st.chat_message("user", avatar="user"):
+                input_placeholder = st.empty()
+            with st.chat_message("robot", avatar="assistant"):
+                message_placeholder = st.empty()
+        input_placeholder.markdown(prompt_text)
+        st.session_state.messages4.append({"role": "user", "content": prompt_text, "avatar": "user"})
+        st.session_state.text4 = getText("user", prompt_text, st.session_state.text4)
+        question = checklen(st.session_state.text4)
+        main_chat(appid,api_key,api_secret,Spark_url,domain,question)
+        st.session_state.text4 = getText("assistant", answer, st.session_state.text4)
+        st.session_state.messages4.append({"role": "robot", "content": answer, "avatar": "assistant"})
+        st.rerun()
+    button_clear = st.button("清空", on_click=clear_all4, key='clear4')
