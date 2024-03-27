@@ -149,3 +149,13 @@ python -m streamlit run ./Qwen_Turbo.py --theme.base dark --server.port 8501
 ```
 python -m streamlit run ./星火大模型.py --theme.base dark --server.port 8501
 ```
+
+#### 4. 百度 - 零一万物的开源模型 Yi-34B-Chat
+
+百度千帆大模型平台的 API key 获取（大部分收费，有个别限时免费）：https://console.bce.baidu.com/qianfan/overview
+
+运行命令：
+
+```
+python -m streamlit run ./Yi-34B-Chat.py --theme.base dark --server.port 8501
+```
