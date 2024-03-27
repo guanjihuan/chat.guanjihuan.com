@@ -26,8 +26,12 @@ with st.sidebar:
         st.write('当前模型：'+API_model_0)
 
     with st.expander('参数', expanded=True):
-        top_k = st.slider('top_k', 1, 6, value=4, step=1)
-        temperature = st.slider('temperature', 0.01, 1.0, value=0.5, step=0.01)
+        top_k = st.slider('top_k', 1, 6, value=4, step=1, key='top_k_session')
+        temperature = st.slider('temperature', 0.01, 1.0, value=0.5, step=0.01, key='temperature_session')
+        def reset_parameter():
+            st.session_state['top_k_session'] = 4
+            st.session_state['temperature_session'] = 0.5
+        reset_parameter_button = st.button('重置', on_click=reset_parameter)
 
 # 云端环境的服务地址
 if API_model == '讯飞 - 星火大模型 V1.5':

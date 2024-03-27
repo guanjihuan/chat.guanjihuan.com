@@ -157,5 +157,5 @@ python -m streamlit run ./星火大模型.py --theme.base dark --server.port 850
 运行命令：
 
 ```
-python -m streamlit run ./Yi-34B-Chat.py --theme.base dark --server.port 8501
+python -m streamlit run ./Yi_34B_Chat.py --theme.base dark --server.port 8501
 ```

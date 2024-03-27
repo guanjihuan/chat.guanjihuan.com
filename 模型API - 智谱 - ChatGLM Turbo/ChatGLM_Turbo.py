@@ -23,8 +23,12 @@ zhipuai.api_key = " "
 
 with st.sidebar:
     with st.expander('参数', expanded=True):
-        top_p = st.slider('top_p', 0.01, 1.0, value=0.7, step=0.01)
-        temperature = st.slider('temperature', 0.01, 1.0, value=0.95, step=0.01)
+        top_p = st.slider('top_p', 0.01, 1.0, value=0.7, step=0.01, key='top_p_session')
+        temperature = st.slider('temperature', 0.01, 1.0, value=0.95, step=0.01, key='temperature_session')
+        def reset_parameter():
+            st.session_state['top_p_session'] = 0.7
+            st.session_state['temperature_session'] = 0.95
+        reset_parameter_button = st.button('重置', on_click=reset_parameter)
 
 def chatglm_chat(prompt=[]):
     response = zhipuai.model_api.sse_invoke(
