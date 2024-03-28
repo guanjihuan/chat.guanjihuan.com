@@ -46,7 +46,7 @@ elif API_model == '讯飞 - 星火大模型 V3.0':
     domain = "generalv3"    # v3.0版本
     Spark_url = "ws://spark-api.xf-yun.com/v3.1/chat"  # v3.0环境的地址
 elif API_model == '讯飞 - 星火大模型 V3.5':
-    domain = "generalv3"    # v3.0版本
+    domain = "generalv3.5"    # v3.5版本
     Spark_url = "ws://spark-api.xf-yun.com/v3.5/chat"  # v3.5环境的地址
 
 import _thread as thread
