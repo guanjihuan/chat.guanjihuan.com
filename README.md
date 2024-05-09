@@ -34,7 +34,7 @@ python -m streamlit run web_demo.py
 streamlit run web_demo.py --theme.base dark --server.port 8501 --server.address 0.0.0.0 
 ```
 
-为了防止一些不必要的报错，可以更新一下操作系统的显卡驱动并重启：
+如果是本地运行开源大语言模型，为了防止一些不必要的报错，可以更新一下操作系统的显卡驱动并重启：
 
 ```
 sudo apt-get update
@@ -44,7 +44,7 @@ sudo apt-get install ubuntu-drivers-common
 sudo ubuntu-drivers autoinstall
 ```
 
-此外，可以更新一下 Pytorch（ https://pytorch.org/get-started/locally/ ），也可以防止一些报错：
+此外，更新一下 Pytorch（ [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) ）也可以防止一些报错：
 
 ```
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
