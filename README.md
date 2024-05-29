@@ -118,7 +118,7 @@ python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 
 #### 1. 智谱 - ChatGLM_Turbo
 
-智谱 - ChatGLM Turbo 的 API key 获取（收费，可免费试用）：https://maas.aminer.cn
+智谱 API key 获取（收费，可免费试用）：https://maas.aminer.cn
 
 运行命令：
 
@@ -130,7 +130,7 @@ python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 
 #### 2. 阿里 - Qwen_Turbo
 
-阿里 - Qwen_Turbo 的 API key 获取（收费，可免费试用）：https://dashscope.aliyun.com
+阿里 API key 获取（有的收费，有的免费）：https://dashscope.aliyun.com
 
 运行命令：
 
@@ -140,9 +140,18 @@ python -m streamlit run ./Qwen_Turbo.py --theme.base dark --server.port 8501
 
 需要安装软件包：pip install dashscope
 
-#### 3. 讯飞 - 星火大模型
+#### 3. 腾讯 - 混元大模型
 
-讯飞 - 星火大模型的 API key 获取（收费，可免费试用）：https://xinghuo.xfyun.cn
+腾讯 API key 获取（有的收费，有的免费）：https://cloud.tencent.com/product/hunyuan
+
+运行命令：
+```
+python -m streamlit run ./Hunyuan Lite.py --theme.base dark --server.port 8501
+```
+
+#### 4. 讯飞 - 星火大模型
+
+讯飞 API key 获取（有的收费，有的免费）：https://xinghuo.xfyun.cn
 
 运行命令：
 
@@ -150,9 +159,9 @@ python -m streamlit run ./Qwen_Turbo.py --theme.base dark --server.port 8501
 python -m streamlit run ./星火大模型.py --theme.base dark --server.port 8501
 ```
 
-#### 4. 百度 - 零一万物的开源模型 Yi-34B-Chat
+#### 5. 百度 - 零一万物的开源模型 Yi-34B-Chat
 
-百度千帆大模型平台的 API key 获取（大部分收费，有个别限时免费）：https://console.bce.baidu.com/qianfan/overview
+百度千帆大模型平台 API key 获取（有的收费，有的免费）：https://console.bce.baidu.com/qianfan/overview
 
 运行命令：
 
