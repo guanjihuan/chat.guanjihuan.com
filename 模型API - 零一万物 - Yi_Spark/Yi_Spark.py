@@ -1,26 +1,17 @@
+"""
+This code is supported by the website: https://www.guanjihuan.com
+The newest version of this code is on the web page: https://www.guanjihuan.com/archives/38502
+"""
+
 import streamlit as st
 st.set_page_config(
     page_title="Chat",
     layout='wide'
 )
 
-import requests
-import json
-
-def get_access_token():
-    """
-    使用 API Key，Secret Key 获取access_token，替换下列示例中的应用API Key、应用Secret Key
-    """
-    url = "https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=[应用API Key]&client_secret=[应用Secret Key]"
-
-    payload = json.dumps("")
-    headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    }
-    response = requests.request("POST", url, headers=headers, data=payload)
-    return response.json().get("access_token")
-
+import openai
+API_BASE = "https://api.lingyiwanwu.com/v1"
+API_KEY = "your key"
 
 with st.sidebar:
     with st.expander('参数', expanded=True):
@@ -48,39 +39,39 @@ for ai_response in st.session_state.ai_response:
 
 prompt_placeholder = st.chat_message("user", avatar='user')
 with st.chat_message("robot", avatar="assistant"):
-    message_placeholder_yi_34b = st.empty()
+    message_placeholder = st.empty()
 
-def response_of_yi_34b(prompt):
-    st.session_state.messages.append({'role': "user", 'content': prompt})
-    url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/yi_34b_chat?access_token=" + get_access_token()
-    payload = json.dumps({
-        "messages": st.session_state.messages,
-        "top_p": top_p,
-        "temperature": temperature, 
-        "stream": True
-    })
-    headers = {'Content-Type': 'application/json'}
-    response = requests.request("POST", url, headers=headers, data=payload, stream=True)
+def response_of_yi(prompt):
+    st.session_state.messages.append({'role': 'user', 'content': prompt})
+    client = openai.OpenAI(
+        api_key=API_KEY,
+        base_url=API_BASE
+    )
+    completion = client.chat.completions.create(
+        model="yi-spark",
+        messages=st.session_state.messages,
+        stream=True,
+        temperature=temperature, 
+        top_p=top_p,
+    )
     full_content = ''
-    for line in response.iter_lines():
-        try:
-            dict_data = json.loads(line.decode("UTF-8")[5:])
-            full_content += dict_data['result']
-            message_placeholder_yi_34b.markdown(full_content)
-        except:
-            pass
+    for chunk in completion:
+        response = chunk.choices[0].delta.content or ""
+        full_content += response
+        message_placeholder.markdown(full_content)
         if stop_button:
             break
-    st.session_state.messages.append({'role': "assistant",
+    st.session_state.messages.append({'role': 'assistant',
                         'content': full_content})
     st.session_state.ai_response.append({"role": "robot", "content": full_content, "avatar": "assistant"})
     return full_content
-
+    
 if prompt:
     prompt_placeholder.markdown(prompt)
     st.session_state.ai_response.append({"role": "user", "content": prompt, "avatar": 'user'})
     stop = st.empty()
     stop_button = stop.button('停止', key='break_response')
-    response_of_yi_34b(prompt)
+    response_of_yi(prompt)
     stop.empty()
 button_clear = st.button("清空", on_click=clear_all, key='clear')
+  

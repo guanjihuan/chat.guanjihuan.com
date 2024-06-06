@@ -151,7 +151,7 @@ python -m streamlit run ./Qwen_Turbo.py --theme.base dark --server.port 8501
 
 运行命令：
 ```
-python -m streamlit run ./Hunyuan Lite.py --theme.base dark --server.port 8501
+python -m streamlit run ./Hunyuan_Lite.py --theme.base dark --server.port 8501
 ```
 
 #### 4. 讯飞 - 星火大模型
@@ -164,12 +164,28 @@ python -m streamlit run ./Hunyuan Lite.py --theme.base dark --server.port 8501
 python -m streamlit run ./星火大模型.py --theme.base dark --server.port 8501
 ```
 
-#### 5. 百度 - 零一万物的开源模型 Yi-34B-Chat
+#### 5. 百度 - ERNIE_Speed_128K
 
 百度千帆大模型平台 API key 获取（有的收费，有的免费）：https://console.bce.baidu.com/qianfan/overview
 
 运行命令：
 
 ```
-python -m streamlit run ./Yi_34B_Chat.py --theme.base dark --server.port 8501
+python -m streamlit run ./ERNIE_Speed_128K.py --theme.base dark --server.port 8501
+```
+
+#### 5. 零一万物 - Yi_Spark
+
+零一万物大模型开放平台（有免费额度）：https://platform.lingyiwanwu.com
+
+需要安装 OpenAI 软件包：
+
+```
+pip install openai
+```
+
+运行命令：
+
+```
+python -m streamlit run ./Yi_Spark.py --theme.base dark --server.port 8501
 ```
