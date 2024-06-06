@@ -174,7 +174,7 @@ python -m streamlit run ./星火大模型.py --theme.base dark --server.port 850
 python -m streamlit run ./ERNIE_Speed_128K.py --theme.base dark --server.port 8501
 ```
 
-#### 5. 零一万物 - Yi_Spark
+#### 6. 零一万物 - Yi_Spark
 
 零一万物大模型开放平台（有免费额度）：https://platform.lingyiwanwu.com
 
