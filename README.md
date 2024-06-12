@@ -189,3 +189,18 @@ pip install openai
 ```
 python -m streamlit run ./Yi_Spark.py --theme.base dark --server.port 8501
 ```
+
+#### 7. 火山引擎 - Doubao_lite_32k
+
+豆包大模型 - 火山引擎（有免费额度）：https://www.volcengine.com/product/doubao
+
+需要安装：
+
+```
+pip install volcengine-python-sdk
+```
+
+运行命令：
+```
+python -m streamlit run ./Doubao_lite_32k.py --theme.base dark --server.port 8501
+```
