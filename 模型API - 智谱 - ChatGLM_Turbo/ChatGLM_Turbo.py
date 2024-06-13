@@ -32,7 +32,7 @@ with st.sidebar:
 
 def chatglm_chat(prompt=[]):
     response = zhipuai.model_api.sse_invoke(
-        model="chatglm_turbo",
+        model="glm-3-turbo",
         prompt=prompt,
         temperature=temperature,
         top_p=top_p,
