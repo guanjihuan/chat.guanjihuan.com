@@ -131,7 +131,7 @@ python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 python -m streamlit run ./ChatGLM_Turbo.py --theme.base dark --server.port 8501
 ```
 
-说明：当前代码只对 pip install zhipuai==1.0.7 有效，对最新版本不兼容。另外，早期使用的模型调用是 model='chatglm_turbo'， 官网文档最新的模型是 model="glm-3-turbo"。工单客服回复内容为：“chatglm_turbo与glm-3-turbo是不同的模型，glm-3-turbo理论上能力优于chatglm_turbo，且价格更便宜”。个人推荐 glm-4-flash 模型。
+说明：当前代码只对 pip install zhipuai==1.0.7 有效，对最新版本不兼容。另外，早期使用的模型调用是 model="chatglm_turbo"， 官网文档最新的模型是 model="glm-3-turbo"。工单客服回复内容为：“chatglm_turbo与glm-3-turbo是不同的模型，glm-3-turbo理论上能力优于chatglm_turbo，且价格更便宜”。个人推荐的是 glm-4-flash 模型。
 
 #### 2. 阿里 - Qwen_Turbo
 
