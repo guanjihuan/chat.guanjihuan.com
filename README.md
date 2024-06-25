@@ -119,6 +119,8 @@ internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-c
 python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 ```
 
+#### 4. ……
+
 ### 三、使用大语言模型 API
 
 #### 1. 智谱 - ChatGLM_Turbo
@@ -204,3 +206,21 @@ pip install volcengine-python-sdk
 ```
 python -m streamlit run ./Doubao_lite_32k.py --theme.base dark --server.port 8501
 ```
+
+#### 8. OpenAI - GPT_3.5_Turbo
+
+OpenAI 的 API 接口（需要海外的 IP 地址以及海外银行卡）：https://platform.openai.com
+
+需要安装 OpenAI 软件包：
+
+```
+pip install openai
+```
+
+运行命令：
+
+```
+python -m streamlit run ./GPT_3.5_Turbo.py --theme.base dark --server.port 8501
+```
+
+#### 9. ……
