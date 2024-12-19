@@ -1,5 +1,7 @@
 ## chat.guanjihuan.com
 
+本仓库主要记录这篇博文中的代码：https://www.guanjihuan.com/archives/38502 。
+
 这里把 https://chat.guanjihuan.com 的主要实现代码进行开源。代码参考各个开源大模型的 GitHub 或 HuggingFace 主页、大语言模型的 API 官网，以及 HuggingFace 和 Pytorch 的文档等。
 
 硬件要求：如果是本地 GPU 运行模型，还需要 Nvidia 显卡，至少 6G 显存。说明：这里只测试了几个模型，还有更多开源大模型，感兴趣的可以自行测试。通常，8G 显存的显卡可以量化地加载 7B 左右的模型（70亿参数）；16G 显存的显卡可以完整加载 7B 左右的模型（70亿参数）或量化地加载 14B 左右的模型（140亿参数）；更大参数空间的模型的运行需要更大显存的显卡。开源大模型的排行榜有：
@@ -119,7 +121,13 @@ internlm-chat-7b 模型文件下载：https://huggingface.co/internlm/internlm-c
 python -m streamlit run ./InternLM.py --theme.base dark --server.port 8501
 ```
 
-#### 4. ……
+#### 4. 开源模型 使用 Ollama 调用 llama3.2
+
+Ollama 部分参考这篇：https://www.guanjihuan.com/archives/43861
+
+这里的代码给出了具体的 Streamlit 的实现。
+
+#### 5. ……
 
 ### 三、使用大语言模型 API
 
