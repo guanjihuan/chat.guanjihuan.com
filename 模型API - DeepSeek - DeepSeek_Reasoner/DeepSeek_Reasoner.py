@@ -60,7 +60,7 @@ def response_of_deepseek_chat(prompt):
     think_or_not = 1
     answer_or_not = 1
     for chunk in completion:
-        response = chunk.choices[0].delta.content or ""
+        response = chunk.choices[0].delta.content
         reasoning_content = chunk.choices[0].delta.reasoning_content
         if response == None:
             if think_or_not == 1:
